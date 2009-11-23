@@ -1,0 +1,7 @@
+# lsyncd startup configuration file
+
+# Try to define nice-level for running lsyncd
+SERVICE_RUN_NICE_LEVEL="+5"
+
+# Additional options to lsyncd: 
+#LSYNCD_OPTIONS=""

@@ -1,0 +1,3 @@
+/var/log/lsyncd {
+	create 640 root logs
+}
