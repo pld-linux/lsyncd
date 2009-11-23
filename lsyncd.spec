@@ -10,6 +10,7 @@ Source1:	%{name}.init
 Source2:	%{name}.sysconfig
 Source3:	%{name}.logrotate
 URL:		http://code.google.com/p/lsyncd/
+BuildRequires:	libxml2-devel
 Requires:	rsync
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
