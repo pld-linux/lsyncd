@@ -1,9 +1,9 @@
 Summary:	Live Syncing (Mirror) Daemon
 Name:		lsyncd
 Version:	1.26
-Release:	0.1
+Release:	0.5
 License:	GPL v2+
-Group:		Networking/Utilities
+Group:		Networking/Daemons
 Source0:	http://lsyncd.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	ff06aed03a012c84c0526a4f892900fe
 Source1:	%{name}.init
