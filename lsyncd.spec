@@ -6,6 +6,7 @@ License:	GPL v2+
 Group:		Networking/Daemons
 Source0:	https://github.com/axkibe/lsyncd/archive/release-%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	25d36b73946bec822d5c7f258262d9f3
+Patch0:		docpath.patch
 Source1:	%{name}.init
 Source2:	%{name}.sysconfig
 Source3:	%{name}.logrotate
@@ -26,6 +27,7 @@ with your system.
 
 %prep
 %setup -q -n %{name}-release-%{version}
+%patch0 -p1
 
 %build
 install -d build
@@ -39,8 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},/etc/{rc.d/init.d,logrotate.d,sysconfig},/var/log,%{_mandir}/man1}
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-mv $RPM_BUILD_ROOT{%{_prefix}/''man/*.1,%{_mandir}/man1}
 
 touch $RPM_BUILD_ROOT/var/log/%{name}
 cp -p %{SOURCE1} $RPM_BUILD_ROOT/etc/rc.d/init.d/%{name}

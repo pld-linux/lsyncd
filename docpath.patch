@@ -1,0 +1,9 @@
+--- lsyncd-release-2.2.3/CMakeLists.txt~	2018-03-09 14:39:11.000000000 +0200
++++ lsyncd-release-2.2.3/CMakeLists.txt	2019-01-22 15:50:34.682966367 +0200
+@@ -107,5 +107,5 @@
+ target_link_libraries( lsyncd ${LUA_LIBRARIES} )
+ 
+ install( TARGETS lsyncd RUNTIME DESTINATION bin )
+-install( FILES doc/manpage/lsyncd.1 DESTINATION man )
++install( FILES doc/manpage/lsyncd.1 DESTINATION /usr/share/man/man1 )
+ 
