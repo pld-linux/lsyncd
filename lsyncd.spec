@@ -12,7 +12,10 @@ Source2:	%{name}.sysconfig
 Source3:	%{name}.logrotate
 URL:		https://github.com/axkibe/lsyncd
 BuildRequires:	cmake
+BuildRequires:	libstdc++-devel
 BuildRequires:	libxml2-devel
+BuildRequires:	lua53-devel
+BuildRequires:	lua53
 Requires:	rsync >= 3.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
